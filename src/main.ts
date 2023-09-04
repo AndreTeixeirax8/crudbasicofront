@@ -10,4 +10,4 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   //endereço do git https://github.com/cavanosa/crudFRONT/tree/master/src/app
   //https://www.youtube.com/watch?v=1Zi7_5NZxCg&list=PL4bT56Uw3S4zIAOX1ddx8oJS6jaD43vZC&index=8
 
-  //FALTA AULA 
+  //FALTA AULA 8

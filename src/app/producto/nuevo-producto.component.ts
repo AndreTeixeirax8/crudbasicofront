@@ -11,7 +11,7 @@ import { Producto } from '../models/producto';
 })
 export class NuevoProductoComponent {
 
-  nombre = '';
+  name = '';
   precio: number | null = null;
 
   constructor(
@@ -24,7 +24,7 @@ export class NuevoProductoComponent {
   }
 
   onCreate(): void {
-    const producto = new Producto(this.nombre, this.precio ?? 0);
+    const producto = new Producto(this.name, this.precio ?? 0);
     this.productoService.save(producto).subscribe(
       data => {
         this.toastr.success('Producto Creado', 'OK', {

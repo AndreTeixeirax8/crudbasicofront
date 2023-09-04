@@ -1,10 +1,10 @@
 export class Producto {
     id?: number;
-    nombre: string;
+    name: string;
     precio: number;
 
-    constructor(nombre: string, precio: number) {
-        this.nombre = nombre;
+    constructor(name: string, precio: number) {
+        this.name = name;
         this.precio = precio;
     }
 }
