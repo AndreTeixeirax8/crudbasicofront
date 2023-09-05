@@ -27,31 +27,14 @@ export class EditarProductoComponent {
         this.producto = data;
       },
       err => {
-        this.toastr.error(err.error.mensaje, 'Fail', {
+        this.toastr.error(err.error.message, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
         this.router.navigate(['/']);
       }
     );
   }
-/*
-  onUpdate(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.productoService.update(id, this.producto).subscribe(
-      data => {
-        this.toastr.success('Producto Actualizado', 'OK', {
-          timeOut: 3000, positionClass: 'toast-top-center'
-        });
-        this.router.navigate(['/']);
-      },
-      err => {
-        this.toastr.error(err.error.message, 'Fail', {
-          timeOut: 3000,  positionClass: 'toast-top-center',
-        });
-        
-      }
-    );
-  }*/
+
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
