@@ -30,7 +30,7 @@ export class NuevoProductoComponent {
         this.toastr.success('Produto criado', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/']);
+        this.volver();
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {
@@ -41,7 +41,7 @@ export class NuevoProductoComponent {
   }
 
   volver(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/lista']);
   }
 
 

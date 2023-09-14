@@ -30,7 +30,7 @@ export class EditarProductoComponent {
         this.toastr.error(err.error.message, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
-        this.router.navigate(['/']);
+        this.volver()
       }
     );
   }
@@ -45,7 +45,7 @@ export class EditarProductoComponent {
           this.toastr.success('Producto Actualizado', 'OK', {
             timeOut: 3000, positionClass: 'toast-top-center'
           });
-          this.router.navigate(['/']);
+          this.volver()
         },
         err => {
           this.toastr.error(err.error.message, 'Fail', {
@@ -58,7 +58,7 @@ export class EditarProductoComponent {
 
   
   volver(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/lista']);
   }
 
   

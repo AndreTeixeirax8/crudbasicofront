@@ -8,6 +8,9 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
   // CRUD BASICO DO TUTORIAL DO YOUTUBE
   //endereço do git https://github.com/cavanosa/crudFRONT/tree/master/src/app
-  //https://www.youtube.com/watch?v=1Zi7_5NZxCg&list=PL4bT56Uw3S4zIAOX1ddx8oJS6jaD43vZC&index=8
 
-  //FALTA AULA 8
+  
+  //NOVA PARTE 
+    //https://github.com/cavanosa/nestjs-backend
+    //https://www.youtube.com/watch?v=nu6aaxwUpo8&list=PL4bT56Uw3S4ynnBWONPYz0FPyMLZmTF8w&index=8
+    //INICIO AULA 8 

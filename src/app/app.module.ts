@@ -14,6 +14,10 @@ import { ListaProductoComponent } from './producto/lista-producto.component';
 import { NuevoProductoComponent } from './producto/nuevo-producto.component';
 import { EditarProductoComponent } from './producto/editar-producto.component';
 import { DetalleProductoComponent } from './producto/detalle-producto.component';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistroComponent } from './auth/registro/registro.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { DetalleProductoComponent } from './producto/detalle-producto.component'
     ListaProductoComponent,
     NuevoProductoComponent,
     EditarProductoComponent,
-    DetalleProductoComponent
+    DetalleProductoComponent,
+    HomeComponent,
+    MenuComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
