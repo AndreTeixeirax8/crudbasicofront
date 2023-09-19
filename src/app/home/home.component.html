@@ -2,7 +2,8 @@
 
 <div class="container">
     <div class="jumbotron">
-        <h1 class="display-4">Hello</h1>
+        <h1 class="display-4" *ngIf="!userName">Hello</h1>
+        <h1 class="display-4" *ngIf="userName">Hello,  {{userName}}</h1>
         <p class="lead"> teste </p>
         <hr class="my-4">
         <p>Testes 2</p>

@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
             });
           }else{
             this.tokenService.setToken(data.token);
+            this.router.navigate(['/'])
           }
           
         },   err => {
