@@ -7,8 +7,8 @@
             <th scope="col">Nome</th>
             <th scope="col">Preço</th>
             <th scope="col">Ver</th>
-            <th scope="col">Editar</th>
-            <th scope="col">Apagar</th>
+            <th scope="col" *ngIf="isAdmin">Editar</th>
+            <th scope="col" *ngIf="isAdmin">Apagar</th>
           </tr>
         </thead>
         <tbody>
@@ -17,8 +17,8 @@
             <td>{{producto.name}}</td>
             <td>{{producto.price}}€</td>
             <td><button class="btn btn-outline-primary" routerLink="/detalle/{{producto.id}}"><i class="far fa-eye"></i> Ver</button></td>
-            <td><button class="btn btn-outline-warning" routerLink="/editar/{{producto.id}}"><i class="far fa-edit"></i> Editar</button></td>
-            <td><button class="btn btn-outline-danger" (click)="producto.id !== undefined ? borrar(producto.id) : null"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+            <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editar/{{producto.id}}"><i class="far fa-edit"></i> Editar</button></td>
+            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="producto.id !== undefined ? borrar(producto.id) : null"><i class="far fa-trash-alt"></i> Eliminar</button></td>
 
           </tr>
         </tbody>

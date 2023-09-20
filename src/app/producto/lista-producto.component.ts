@@ -3,6 +3,7 @@ import { Producto } from '../models/producto';
 import { ProductoService } from '../services/producto.service';
 import { ToastrService } from 'ngx-toastr';
 import Swal from 'sweetalert2';
+import { TokenService } from '../token.service';
 
 @Component({
   selector: 'app-lista-producto',
@@ -12,14 +13,18 @@ import Swal from 'sweetalert2';
 export class ListaProductoComponent {
 
   productos: Producto[] = [];
+  listaVacia =undefined;
+  isAdmin?:boolean;
 
   constructor(
     private productoService: ProductoService,
+    private tokenService: TokenService
     //private toastr: ToastrService
     ) { }
 
   ngOnInit():void {
     this.cargarProductos();
+    this.isAdmin = this.tokenService.isAdmin();
   }
 
   cargarProductos(): void {
