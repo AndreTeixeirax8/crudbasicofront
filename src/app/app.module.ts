@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
+import { interceptorProvider } from './interceptors/producto.interceptor';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { RegistroComponent } from './auth/registro/registro.component';
     ToastrModule.forRoot(),
 
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

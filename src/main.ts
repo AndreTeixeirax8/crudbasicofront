@@ -12,5 +12,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
   //NOVA PARTE 
     //https://github.com/cavanosa/nestjs-backend
-    //https://www.youtube.com/watch?v=HVcIJFUepLg&list=PL4bT56Uw3S4ynnBWONPYz0FPyMLZmTF8w&index=10
-    //INICIO AULA 10 
+    //https://www.youtube.com/watch?v=F9x1qoNF_E0&list=PL4bT56Uw3S4ynnBWONPYz0FPyMLZmTF8w&index=13
+    //INICIO AULA 13
+
+   // Problemas na tela de lista de produtos , tentar copiar do git 
