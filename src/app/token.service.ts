@@ -40,28 +40,6 @@ export class TokenService {
       return null;
     }
   }
-/* essa função aparenta estar certa 
-  isAdmin():boolean | void{
-    if (!this.isLogged()) {
-      //return null;
-    }
-
-    const token = this.getToken();
-    const payload = token ? token.split('.')[1] : undefined;
-  
-    if (payload) {
-      const values = atob(payload);
-      const valuesJson = JSON.parse(values);
-      const roles = valuesJson.roles
-      //console.log(roles)
-      if(roles.indexOf('admin') < 0){
-        return false
-      }
-      return true
-  }
-}/*/
-
-/**função feita pelo GPT  */
 
 isAdmin(): boolean {
   if (!this.isLogged()) {
