@@ -9,6 +9,7 @@ import { NuevoProductoComponent } from './producto/nuevo-producto.component';
 import { EditarProductoComponent } from './producto/editar-producto.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
+import { ListaUsuarioComponent } from './usuario/lista-usuario.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'editar/:id', component: EditarProductoComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin']}},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
+  {path: 'usuario', component: ListaUsuarioComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

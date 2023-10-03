@@ -19,6 +19,7 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { interceptorProvider } from './interceptors/producto.interceptor';
+import { ListaUsuarioComponent } from './usuario/lista-usuario.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { interceptorProvider } from './interceptors/producto.interceptor';
     HomeComponent,
     MenuComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    ListaUsuarioComponent
   ],
   imports: [
     BrowserModule,
