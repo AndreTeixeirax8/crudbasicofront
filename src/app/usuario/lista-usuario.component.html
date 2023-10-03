@@ -12,6 +12,9 @@
           <tr *ngFor="let usuario of usuarios">
             <td>{{usuario.id}}</td>
             <td>{{usuario.name}}</td>
+            <button class="btn btn-outline-primary" [routerLink]="'/detalle/user/' + usuario.id">
+              <i class="far fa-eye"></i> Ver
+            </button>
             
 
           </tr>

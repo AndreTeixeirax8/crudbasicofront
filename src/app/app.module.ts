@@ -20,6 +20,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { interceptorProvider } from './interceptors/producto.interceptor';
 import { ListaUsuarioComponent } from './usuario/lista-usuario.component';
+import { DetalleUsuarioComponent } from './usuario/detalle-usuario.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ListaUsuarioComponent } from './usuario/lista-usuario.component';
     MenuComponent,
     LoginComponent,
     RegistroComponent,
-    ListaUsuarioComponent
+    ListaUsuarioComponent,
+    DetalleUsuarioComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,8 @@ export const environment = {
     production: false,
     productoURL: 'http://localhost:3000/producto/',
     authURL: 'http://localhost:3000/auth/',
-    usuarioURL: 'http://localhost:3000/usuario/',
+    usuarioURL: 'http://localhost:3000/usuario',
+
   };
   
   /*
