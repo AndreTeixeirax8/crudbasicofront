@@ -13,12 +13,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { ListaProductoComponent } from './produto/lista-produto.component';
 import { NovoProdutoComponent } from './produto/novo-produto.component';
 import { EditarProductoComponent } from './produto/editar-produto.component';
-import { DetalleProductoComponent } from './produto/detalhe-produto.component';
+import { DetalheProdutoComponent } from './produto/detalhe-produto.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
-import { interceptorProvider } from './interceptors/producto.interceptor';
+import { interceptorProvider } from './interceptors/produto.interceptor';
 import { ListaUsuarioComponent } from './usuario/lista-usuario.component';
 import { DetalheUsuarioComponent } from './usuario/detalhe-usuario.component';
 
@@ -29,7 +29,7 @@ import { DetalheUsuarioComponent } from './usuario/detalhe-usuario.component';
     ListaProductoComponent,
     NovoProdutoComponent,
     EditarProductoComponent,
-    DetalleProductoComponent,
+    DetalheProdutoComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent,

@@ -12,13 +12,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let producto of productos">
-            <td>{{producto.id}}</td>
-            <td>{{producto.name}}</td>
-            <td>R${{producto.price}}</td>
-            <td><button class="btn btn-outline-primary" routerLink="/detalle/{{producto.id}}"><i class="far fa-eye"></i> Ver</button></td>
-            <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editar/{{producto.id}}"><i class="far fa-edit"></i> Editar</button></td>
-            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="producto.id !== undefined ? borrar(producto.id) : null"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+          <tr *ngFor="let produto of produtos">
+            <td>{{produto.id}}</td>
+            <td>{{produto.name}}</td>
+            <td>R$ {{produto.price}}</td>
+            <td><button class="btn btn-outline-primary" routerLink="/detalle/{{produto.id}}"><i class="far fa-eye"></i> Ver</button></td>
+            <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editar/{{produto.id}}"><i class="far fa-edit"></i> Editar</button></td>
+            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="produto.id !== undefined ? borrar(produto.id) : null"><i class="far fa-trash-alt"></i> Apagar</button></td>
 
           </tr>
         </tbody>

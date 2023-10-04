@@ -9,12 +9,12 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './detalhe-produto.component.html',
   styleUrls: ['./detalhe-produto.component.css']
 })
-export class DetalleProductoComponent {
+export class DetalheProdutoComponent {
 
-  producto: Produto | undefined;
+  produto: Produto | undefined;
 
   constructor(
-    private productoService: ProdutoService,
+    private produtoService: ProdutoService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router
@@ -22,9 +22,9 @@ export class DetalleProductoComponent {
 
   ngOnInit():void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.productoService.detail(id).subscribe(
+    this.produtoService.detail(id).subscribe(
       data => {
-        this.producto = data;
+        this.produto = data;
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {

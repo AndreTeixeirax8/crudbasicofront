@@ -9,27 +9,27 @@ import { Produto } from '../models/produto';
 })
 export class ProdutoService {
 
-  productoURL = environment.productoURL;
+  produtoURL = environment.produtoURL;
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Produto[]> {
-    return this.httpClient.get<Produto[]>(`${this.productoURL}`);
+    return this.httpClient.get<Produto[]>(`${this.produtoURL}`);
   }
 
   public detail(id: number): Observable<Produto> {
-    return this.httpClient.get<Produto>(`${this.productoURL}${id}`);
+    return this.httpClient.get<Produto>(`${this.produtoURL}${id}`);
   }
 
-  public save(producto: Produto): Observable<any> {
-    return this.httpClient.post<any>(`${this.productoURL}`, producto);
+  public save(produto: Produto): Observable<any> {
+    return this.httpClient.post<any>(`${this.produtoURL}`, produto);
   }
 
   public update(id: number, producto: Produto): Observable<any> {
-    return this.httpClient.put<any>(`${this.productoURL}${id}`, producto);
+    return this.httpClient.put<any>(`${this.produtoURL}${id}`, producto);
   }
 
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(`${this.productoURL}${id}`);
+    return this.httpClient.delete<any>(`${this.produtoURL}${id}`);
   }
 }

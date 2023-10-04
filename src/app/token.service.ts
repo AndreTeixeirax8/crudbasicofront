@@ -54,7 +54,6 @@ isAdmin(): boolean {
     const valuesJson = JSON.parse(values);
     const roles = valuesJson.roles;
 
-    // Verifique se o usuário possui a função 'admin' no array de roles.
     return roles.indexOf('admin') >= 0;
   }
 

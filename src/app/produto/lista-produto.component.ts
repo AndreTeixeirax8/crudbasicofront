@@ -12,12 +12,12 @@ import { TokenService } from '../token.service';
 })
 export class ListaProductoComponent {
 
-  productos: Produto[] = [];
+  produtos: Produto[] = [];
   listaVacia =undefined;
   isAdmin?:boolean;
 
   constructor(
-    private productoService: ProdutoService,
+    private produtoService: ProdutoService,
     private tokenService: TokenService
     
     ) { }
@@ -28,9 +28,9 @@ export class ListaProductoComponent {
   }
 
   carregarProductos(): void {
-    this.productoService.lista().subscribe(
+    this.produtoService.lista().subscribe(
       data => {
-        this.productos = data;
+        this.produtos = data;
       },
       err => {
         console.log(err);
@@ -47,7 +47,7 @@ export class ListaProductoComponent {
     confirmButtonText:'Yes, delete it',
     cancelButtonText:'No keep it',
    }).then((result)=>{
-    this.productoService.delete(id).subscribe(res => this.carregarProductos())
+    this.produtoService.delete(id).subscribe(res => this.carregarProductos())
     if(result.value){
       Swal.fire('Deleted','Your Imaginary file has deleted','success')
     }else if (result.dismiss === Swal.DismissReason.cancel){
