@@ -10,10 +10,10 @@ import { AppComponent } from './app.component';
 // external
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { ListaProductoComponent } from './produto/lista-producto.component';
+import { ListaProductoComponent } from './produto/lista-produto.component';
 import { NovoProdutoComponent } from './produto/novo-produto.component';
-import { EditarProductoComponent } from './produto/editar-producto.component';
-import { DetalleProductoComponent } from './produto/detalle-producto.component';
+import { EditarProductoComponent } from './produto/editar-produto.component';
+import { DetalleProductoComponent } from './produto/detalhe-produto.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './auth/login/login.component';

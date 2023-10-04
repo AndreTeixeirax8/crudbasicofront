@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { ProductoService } from '../services/producto.service';
+import { ProdutoService } from '../services/produto.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { Producto } from '../models/producto';
+import { Produto } from '../models/produto';
 
 @Component({
   selector: 'app-novo-produto',
@@ -15,7 +15,7 @@ export class NovoProdutoComponent {
   price: number | null = null;
 
   constructor(
-    private productoService: ProductoService,
+    private produtoService: ProdutoService,
     private toastr: ToastrService,
     private router: Router
     ) { }
@@ -24,8 +24,8 @@ export class NovoProdutoComponent {
   }
 
   onCreate(): void {
-    const producto = new Producto(this.name, this.price ?? 0);
-    this.productoService.save(producto).subscribe(
+    const produto = new Produto(this.name, this.price ?? 0);
+    this.produtoService.save(produto).subscribe(
       data => {
         this.toastr.success('Produto criado', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'

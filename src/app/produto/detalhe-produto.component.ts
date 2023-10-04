@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { Producto } from '../models/producto';
-import { ProductoService } from '../services/producto.service';
+import { Produto } from '../models/produto';
+import { ProdutoService } from '../services/produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-detalle-producto',
-  templateUrl: './detalle-producto.component.html',
-  styleUrls: ['./detalle-producto.component.css']
+  selector: 'app-detalhe-produto',
+  templateUrl: './detalhe-produto.component.html',
+  styleUrls: ['./detalhe-produto.component.css']
 })
 export class DetalleProductoComponent {
 
-  producto: Producto | undefined;
+  producto: Produto | undefined;
 
   constructor(
-    private productoService: ProductoService,
+    private productoService: ProdutoService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router

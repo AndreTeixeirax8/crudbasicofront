@@ -2,30 +2,30 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { Producto } from '../models/producto';
+import { Produto } from '../models/produto';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductoService {
+export class ProdutoService {
 
   productoURL = environment.productoURL;
 
   constructor(private httpClient: HttpClient) { }
 
-  public lista(): Observable<Producto[]> {
-    return this.httpClient.get<Producto[]>(`${this.productoURL}`);
+  public lista(): Observable<Produto[]> {
+    return this.httpClient.get<Produto[]>(`${this.productoURL}`);
   }
 
-  public detail(id: number): Observable<Producto> {
-    return this.httpClient.get<Producto>(`${this.productoURL}${id}`);
+  public detail(id: number): Observable<Produto> {
+    return this.httpClient.get<Produto>(`${this.productoURL}${id}`);
   }
 
-  public save(producto: Producto): Observable<any> {
+  public save(producto: Produto): Observable<any> {
     return this.httpClient.post<any>(`${this.productoURL}`, producto);
   }
 
-  public update(id: number, producto: Producto): Observable<any> {
+  public update(id: number, producto: Produto): Observable<any> {
     return this.httpClient.put<any>(`${this.productoURL}${id}`, producto);
   }
 

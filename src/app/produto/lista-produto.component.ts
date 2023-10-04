@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
-import { Producto } from '../models/producto';
-import { ProductoService } from '../services/producto.service';
+import { Produto } from '../models/produto';
+import { ProdutoService } from '../services/produto.service';
 import { ToastrService } from 'ngx-toastr';
 import Swal from 'sweetalert2';
 import { TokenService } from '../token.service';
 
 @Component({
-  selector: 'app-lista-producto',
-  templateUrl: './lista-producto.component.html',
-  styleUrls: ['./lista-producto.component.css']
+  selector: 'app-lista-produto',
+  templateUrl: './lista-produto.component.html',
+  styleUrls: ['./lista-produto.component.css']
 })
 export class ListaProductoComponent {
 
-  productos: Producto[] = [];
+  productos: Produto[] = [];
   listaVacia =undefined;
   isAdmin?:boolean;
 
   constructor(
-    private productoService: ProductoService,
+    private productoService: ProdutoService,
     private tokenService: TokenService
-    //private toastr: ToastrService
+    
     ) { }
 
   ngOnInit():void {
