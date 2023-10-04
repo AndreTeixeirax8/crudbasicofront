@@ -10,7 +10,7 @@ import { EditarProductoComponent } from './producto/editar-producto.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { ListaUsuarioComponent } from './usuario/lista-usuario.component';
-import { DetalleUsuarioComponent } from './usuario/detalle-usuario.component';
+import { DetalheUsuarioComponent } from './usuario/detalhe-usuario.component';
 
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},
   {path: 'usuario', component: ListaUsuarioComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
-  {path: 'detalle/user/:id', component: DetalleUsuarioComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
+  {path: 'detalle/user/:id', component: DetalheUsuarioComponent, canActivate: [ProductoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

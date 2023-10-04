@@ -20,7 +20,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { interceptorProvider } from './interceptors/producto.interceptor';
 import { ListaUsuarioComponent } from './usuario/lista-usuario.component';
-import { DetalleUsuarioComponent } from './usuario/detalle-usuario.component';
+import { DetalheUsuarioComponent } from './usuario/detalhe-usuario.component';
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { DetalleUsuarioComponent } from './usuario/detalle-usuario.component';
     LoginComponent,
     RegistroComponent,
     ListaUsuarioComponent,
-    DetalleUsuarioComponent
+    DetalheUsuarioComponent
   ],
   imports: [
     BrowserModule,
