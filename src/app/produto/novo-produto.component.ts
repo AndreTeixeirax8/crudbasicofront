@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { Producto } from '../models/producto';
 
 @Component({
-  selector: 'app-nuevo-producto',
-  templateUrl: './nuevo-producto.component.html',
-  styleUrls: ['./nuevo-producto.component.css']
+  selector: 'app-novo-produto',
+  templateUrl: './novo-produto.component.html',
+  styleUrls: ['./novo-produto.component.css']
 })
-export class NuevoProductoComponent {
+export class NovoProdutoComponent {
 
   name = '';
   price: number | null = null;

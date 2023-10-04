@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListaProductoComponent } from './produto/lista-producto.component';
 import { DetalleProductoComponent } from './produto/detalle-producto.component';
-import { NuevoProductoComponent } from './produto/nuevo-producto.component';
+import { NovoProdutoComponent } from './produto/novo-produto.component';
 import { EditarProductoComponent } from './produto/editar-producto.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'lista', component: ListaProductoComponent, canActivate: [ProdutoGuard], data: {expectedRol: ['admin', 'user']}},
   {path: 'detalle/:id', component: DetalleProductoComponent, canActivate: [ProdutoGuard], data: {expectedRol: ['admin', 'user']}},
-  {path: 'nuevo', component: NuevoProductoComponent, canActivate: [ProdutoGuard], data: {expectedRol: ['admin']}},
+  {path: 'nuevo', component: NovoProdutoComponent, canActivate: [ProdutoGuard], data: {expectedRol: ['admin']}},
   {path: 'editar/:id', component: EditarProductoComponent, canActivate: [ProdutoGuard], data: {expectedRol: ['admin']}},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'registro', component: RegistroComponent, canActivate: [LoginGuard]},

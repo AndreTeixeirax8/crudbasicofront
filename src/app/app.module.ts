@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ListaProductoComponent } from './produto/lista-producto.component';
-import { NuevoProductoComponent } from './produto/nuevo-producto.component';
+import { NovoProdutoComponent } from './produto/novo-produto.component';
 import { EditarProductoComponent } from './produto/editar-producto.component';
 import { DetalleProductoComponent } from './produto/detalle-producto.component';
 import { HomeComponent } from './home/home.component';
@@ -27,7 +27,7 @@ import { DetalheUsuarioComponent } from './usuario/detalhe-usuario.component';
   declarations: [
     AppComponent,
     ListaProductoComponent,
-    NuevoProductoComponent,
+    NovoProdutoComponent,
     EditarProductoComponent,
     DetalleProductoComponent,
     HomeComponent,
