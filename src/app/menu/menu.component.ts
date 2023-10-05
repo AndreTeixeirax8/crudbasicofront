@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit {
 
   isLogged?: boolean;
   isAdmin?: boolean;
+  showNav = false;
 
   constructor(
     private tokenService:TokenService,
@@ -23,6 +24,10 @@ export class MenuComponent implements OnInit {
     ///this.tokenService.isLogged() ? this.isLogged = true : this.isLogged =false;
     this.isAdmin = this.tokenService.isAdmin();
 
+  }
+
+  toggleNav(): void {//menu hamburguer
+    this.showNav = !this.showNav;
   }
 
   logOut():void{
