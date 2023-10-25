@@ -16,6 +16,10 @@ export class ListaProductoComponent {
   listaVacia =undefined;
   isAdmin?:boolean;
 
+  currentPage = 1; // Página atual
+  itemsPerPage = 5; // Itens por página
+  totalItems = 0; // Total de itens no servidor
+
   constructor(
     private produtoService: ProdutoService,
     private tokenService: TokenService
@@ -26,13 +30,25 @@ export class ListaProductoComponent {
     this.carregarProductos();
     this.isAdmin = this.tokenService.isAdmin();
   }
-
+/*
   carregarProductos(): void {
     this.produtoService.lista().subscribe(
       data => {
         this.produtos = data;
       },
       err => {
+        console.log(err);
+      }
+    );
+  }*/
+
+  carregarProductos(): void {
+    this.produtoService.lista(this.currentPage, this.itemsPerPage).subscribe(
+      (response: any) => {
+        this.produtos = response.data;
+        this.totalItems = response.meta.totalItems;
+      },
+      (err) => {
         console.log(err);
       }
     );
@@ -56,6 +72,21 @@ export class ListaProductoComponent {
       )
     }
    })
+  }
+
+  paginaAnterior(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.carregarProductos();
+    }
+  }
+  
+  proximaPagina(): void {
+    const totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+    if (this.currentPage < totalPages) {
+      this.currentPage++;
+      this.carregarProductos();
+    }
   }
 
 }

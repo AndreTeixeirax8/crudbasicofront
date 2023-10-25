@@ -1,26 +1,37 @@
 <app-menu></app-menu>
 <div class="container">
-    <table class="table table-dark text-center">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Preço</th>
-            <th scope="col">Ver</th>
-            <th scope="col" *ngIf="isAdmin">Editar</th>
-            <th scope="col" *ngIf="isAdmin">Apagar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let produto of produtos">
-            <td>{{produto.id}}</td>
-            <td>{{produto.name}}</td>
-            <td>R$ {{produto.price}}</td>
-            <td><button class="btn btn-outline-primary" routerLink="/detalle/{{produto.id}}"><i class="far fa-eye"></i> Ver</button></td>
-            <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editar/{{produto.id}}"><i class="far fa-edit"></i> Editar</button></td>
-            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="produto.id !== undefined ? borrar(produto.id) : null"><i class="far fa-trash-alt"></i> Apagar</button></td>
+  <table class="table table-dark text-center">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ver</th>
+        <th scope="col" *ngIf="isAdmin">Editar</th>
+        <th scope="col" *ngIf="isAdmin">Apagar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of produtos">
+        <td>{{produto.id}}</td>
+        <td>{{produto.name}}</td>
+        <td>R$ {{produto.price}}</td>
+        <td><button class="btn btn-outline-primary" routerLink="/detalle/{{produto.id}}"><i class="far fa-eye"></i> Ver</button></td>
+        <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editar/{{produto.id}}"><i class=""></i> Editar</button></td>
+        <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="produto.id !== undefined ? borrar(produto.id) : null"><i class="far fa-trash-alt"></i> Apagar</button></td>
+      </tr>
+    </tbody>
+  </table>
 
-          </tr>
-        </tbody>
-      </table>
+  <!-- Adicione os botões da paginação após a tabela -->
+  <nav *ngIf="totalItems > itemsPerPage">
+    <ul class="pagination">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="paginaAnterior()"><i class="fa-solid fa-arrow-left"></i>Anterior</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === totalItems / itemsPerPage">
+        <a class="page-link" (click)="proximaPagina()">Próxima</a>
+      </li>
+    </ul>
+  </nav>
 </div>

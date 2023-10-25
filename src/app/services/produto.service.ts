@@ -13,8 +13,14 @@ export class ProdutoService {
 
   constructor(private httpClient: HttpClient) { }
 
+  /*
   public lista(): Observable<Produto[]> {
     return this.httpClient.get<Produto[]>(`${this.produtoURL}`);
+  }*/
+
+  lista(page: number, itemsPerPage: number): Observable<any> {
+    const url = `${this.produtoURL}?page=${page}&limit=${itemsPerPage}`;
+    return this.httpClient.get(url);
   }
 
   public detail(id: number): Observable<Produto> {
