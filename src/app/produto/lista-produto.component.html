@@ -27,10 +27,10 @@
   <nav *ngIf="totalItems > itemsPerPage">
     <ul class="pagination">
       <li class="page-item" [class.disabled]="currentPage === 1">
-        <a class="page-link" (click)="paginaAnterior()"><i class="fa-solid fa-arrow-left"></i>Anterior</a>
+        <a class="page-link" (click)="paginaAnterior()"><i class="fa fa-reply" aria-hidden="true"></i> Anterior</a>
       </li>
       <li class="page-item" [class.disabled]="currentPage === totalItems / itemsPerPage">
-        <a class="page-link" (click)="proximaPagina()">Próxima</a>
+        <a class="page-link" (click)="proximaPagina()"><i class="fa fa-share" aria-hidden="true"></i> Próxima</a>
       </li>
     </ul>
   </nav>
