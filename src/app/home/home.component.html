@@ -1,25 +1,34 @@
 <app-menu></app-menu>
 
 <div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4" *ngIf="!userName">Olá</h1>
-        <h1 class="display-4" *ngIf="userName">Olá  {{userName}}</h1>
-        <p class="lead"> Treinamento NestJS e Angular </p>
-        <hr class="my-4">
-        <p>Treinamento em NestJS e Angular</p>
-       
-            <div class="row">
-             <!--
-              <div class="col-md-6">
-                <img src="./app/img/NestJS.jpg" alt="NestJS" class="img-fluid">
-              </div>
-              <div class="col-md-6">
-                <img src="./app/img/Angular.jpg" alt="Angular" class="img-fluid">
-              </div>
-             --> 
-            </div>
-        
-        
-    </div>
+  <div class="jumbotron">
+    <h1 class="display-4" *ngIf="!userName">Olá</h1>
+    <h1 class="display-4" *ngIf="userName">Olá {{ userName }}</h1>
+    <p class="lead">Treinamento NestJS e Angular</p>
+    <hr class="my-4" />
+    <p>Treinamento em NestJS e Angular</p>
 
+    <div class="row">
+      <div *ngFor="let noticia of noticias">
+        <div class="card mb-3">
+          <img
+            *ngIf="noticia.imagemCapa"
+            [src]="'/' + noticia.imagemCapa"
+            class="card-img-top"
+            alt="Imagem de capa"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ noticia.titulo }}</h5>
+            <p class="card-text">{{ noticia.conteudo }}</p>
+            <p class="card-text">
+              <small class="text-muted"
+                >Publicado por {{ noticia.autor }} em
+                {{ noticia.dataPublicacao | date : "dd/MM/yyyy" }}</small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
